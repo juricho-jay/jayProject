@@ -65,6 +65,8 @@ Special Thanks to 👍 https://ssjeong.tistory.com/   👍 https://github.com/Je
 ### 7. lombok (Getter, Setter, ToString, NoArgsConstructor, AllArgsConstructor) + required(true*/false)
    
 
+<br/>
+<br/>
 # 🐠📖 2023.01.30[jrcho]: Map & Set & Iterator
 ### 1. Map의 키 값만 가져오기
      1-1. key/value
@@ -80,4 +82,25 @@ Special Thanks to 👍 https://ssjeong.tistory.com/   👍 https://github.com/Je
     2-1. map.containsKey(오브젝트);
     2-2. 리턴값이 boolean이기 때문에, System.out.println에서는 그대로 넣어서 쓸 수 있지만, 
          log.info()처럼 String이나 다른 타입으로 받는 경우에는 형변환이 필요 (String.valueOf())
+    2-3. set에는 순서가 없는데 정렬되는 것을 보아하니, iterator()가 기본으로 정렬해주는듯
     
+> 💬 @Test 어노테이션 > 자바 단위 테스트 Java Unit Test
+    
+    
+# 🐠📖 2023.01.30[jrcho]: Interceptor & JWT Token
+
+### 1. build.gradle > dependencies 설정
+    1-1. implementation("io.jsonwebtoken:jjwt:0.9.1")
+         implementation('javax.xml.bind:jaxb-api:2.4.0-b180830.0359')
+### 2. resources > application.properties
+    2-1. server.port=1234 포트 설정   
+         (default port: http(80), https(443) / JDBC default port: oracle(1521), PostgreSQL(5432), Tibero(8629), MySQL/MariaDB(3306))
+    2-2. (customizable) 원하는 대로 설정 (.으로 구분) ex:  jwt.token.key= * (*에 고유 토큰 secretKey) 
+         * properties에 넣는 이유는 보안상 소스 코드나 로그에 노출되지 않도록 하기 위해   
+         
+### 3. Key값 생성 전 세팅
+    2-1. @PostConstruct 
+         * 의존성 주입이 끝나고 bean이 초기화된 후 WAS가 올라가기 전 딱 한 번 실행됨 (bean이 여러번 초기화되는 것 방지)
+           bean : Spring에 의해 생성되고 관리되는 자바 객체
+    2-2. 1-2에서 설정한 프로퍼티 값 주입 (@Value 사용 - 주의:lombok이 아닌 bean의 Value)
+        
