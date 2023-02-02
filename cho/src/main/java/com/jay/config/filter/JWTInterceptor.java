@@ -19,7 +19,8 @@ public class JWTInterceptor implements HandlerInterceptor {
 	@Override
 	public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws
 		Exception {
-		String token = request.getHeader("Authorization");
+
+		String token = request.getHeader("Authorization"); // postman > Headers에서 설정한 Key값
 		if (token != null) {
 			jwtService.checkToken(token);
 			return true;
