@@ -99,8 +99,10 @@ Special Thanks to 👍 https://ssjeong.tistory.com/   👍 https://github.com/Je
          * properties에 넣는 이유는 보안상 소스 코드나 로그에 노출되지 않도록 하기 위해   
          
 ### 3. Key값 생성 전 세팅
-    2-1. @PostConstruct 
-         * 의존성 주입이 끝나고 bean이 초기화된 후 WAS가 올라가기 전 딱 한 번 실행됨 (bean이 여러번 초기화되는 것 방지)
+    3-1. JWTService 생성 > init 메서드 생성 + @PostConstruct 
+         * @PostConstruc : 의존성 주입이 끝나고 bean이 초기화된 후 WAS가 올라가기 전 딱 한 번 실행됨 (bean이 여러번 초기화되는 것 방지)
            bean : Spring에 의해 생성되고 관리되는 자바 객체
-    2-2. 1-2에서 설정한 프로퍼티 값 주입 (@Value 사용 - 주의:lombok이 아닌 bean의 Value)
+           
+         * Filter에서 쓰려다가 안돼서 띠용 했는데, Filter는 스프링 컨텍스트 외부에 존재하기 때문에 스프링 컨텍스트인 @PostConstruct 사용불가  
+    3-2. 2-2에서 설정한 프로퍼티 값 주입 (@Value 사용 - 주의:lombok이 아닌 bean의 Value)
         
