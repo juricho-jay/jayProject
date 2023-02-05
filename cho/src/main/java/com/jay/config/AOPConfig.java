@@ -19,12 +19,12 @@ public class AOPConfig {
 
 	@Around("execution(* *Test(..))")
 	public Object getAround(ProceedingJoinPoint pjp) throws Throwable {
-		System.out.println("[LOG] > getAround method start");
+		// System.out.println("[LOG] > getAround method start");
 
 		// 2022.12.15[프뚜]: 메서드 실행
 		Object retVal = pjp.proceed();
 
-		System.out.println("[LOG] > getAround method end");
+		// System.out.println("[LOG] > getAround method end");
 		return retVal;
 	}
 

@@ -49,4 +49,8 @@ class ChoApplicationTests {
 		log.info(String.valueOf(map.containsValue("value3243")));
 	}
 
+	@Test
+	void threadTestMethod() {
+		log.info("야호");
+	}
 }

@@ -41,7 +41,7 @@
 
     <appender name="console" class="ch.qos.logback.core.ConsoleAppender">
         <layout class="ch.qos.logback.classic.PatternLayout">
-            <pattern>[%F]%M\(%L\) : %m%n</pattern>
+            <pattern>%-5level %d{yyyy-MM-dd HH:mm:ss.SSS} [%-21thread] %class{36}.%method:%line %msg%n</pattern>
         </layout>
     </appender>
 

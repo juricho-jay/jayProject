@@ -23,6 +23,17 @@ public class TestController {
 	@GetMapping("/getTest")
 	public String getTest(@RequestParam String userId) throws Exception {
 		log.info("getTest: " + userId);
+		for (int i = 0; i < 10; i++) {
+			new Thread(() -> {
+				try {
+					Thread.sleep(3000);
+					log.info("getTest2: " + userId);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}).start();
+		}
+
 		return userId;
 	}
 
