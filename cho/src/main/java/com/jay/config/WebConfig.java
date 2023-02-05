@@ -1,14 +1,11 @@
-package com.jay.config.service;
-
-import java.security.Key;
+package com.jay.config;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
-import com.jay.config.filter.JWTInterceptor;
+import com.jay.interceptor.JWTInterceptor;
 
-import io.jsonwebtoken.SignatureAlgorithm;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 
@@ -25,8 +22,6 @@ public class WebConfig implements WebMvcConfigurer {
 
 	@Override
 	public void addInterceptors(InterceptorRegistry registry) {
-		log.info("안녕");
-		log.info(excludePath.toString());
 		registry.addInterceptor(jwtInterceptor)
 			.addPathPatterns("/**")
 			.excludePathPatterns(excludePath);

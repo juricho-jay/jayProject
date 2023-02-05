@@ -1,4 +1,4 @@
-package com.jay.config.service;
+package com.jay.api.jwt.service;
 
 import java.security.Key;
 import java.util.Date;
