@@ -39,7 +39,13 @@ public class JWTService {
 		byte[] secretKeyBytes = DatatypeConverter.parseBase64Binary(secretKey);
 		signingKey = new SecretKeySpec(secretKeyBytes, signatureAlgorithm.getJcaName());
 
-		log.info("init 탔음");
+		new Thread(() -> {
+			int i = 0;
+			while (i < 10000) {
+				i++;
+				log.info("안녕 나는 따로 빠진 로그얌");
+			}
+		}).start();
 	}
 
 	public String createToken() throws Exception {

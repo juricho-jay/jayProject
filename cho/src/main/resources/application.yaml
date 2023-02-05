@@ -1,0 +1,7 @@
+server:
+  port: 80
+
+jwt:
+  token:
+    key: jaycho0428
+
