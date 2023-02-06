@@ -105,4 +105,7 @@ Special Thanks to 👍 https://ssjeong.tistory.com/   👍 https://github.com/Je
            
          * Filter에서 쓰려다가 안돼서 띠용 했는데, Filter는 스프링 컨텍스트 외부에 존재하기 때문에 스프링 컨텍스트인 @PostConstruct 사용불가  
     3-2. 2-2에서 설정한 프로퍼티 값 주입 (@Value 사용 - 주의:lombok이 아닌 bean의 Value)
-        
+
+# 🐠📖 2023.02.05[jrcho]: AOPConfig & Logback & Process&Thread 
+
+### 1. AOP (Aspect Oriented Programming)
