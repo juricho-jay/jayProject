@@ -24,6 +24,7 @@ class ChoApplicationTests {
 		map.put("key3", "value3");
 		map.put("key2", "value2");
 
+		// key값만 가져오기
 		Set<String> set = map.keySet();
 
 		Iterator<String> ite = set.iterator();
