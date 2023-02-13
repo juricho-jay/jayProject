@@ -22,6 +22,7 @@ public class JWTInterceptor implements HandlerInterceptor {
 
 		return true;
 
+		// 토큰 체크 잠시 막아둠
 		// String token = request.getHeader("Authorization"); // postman > Headers에서 설정한 Key값
 		// if (token != null) {
 		// 	jwtService.checkToken(token);
