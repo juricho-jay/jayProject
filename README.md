@@ -109,3 +109,25 @@ Special Thanks to 👍 https://ssjeong.tistory.com/   👍 https://github.com/Je
 # 🐠📖 2023.02.05[jrcho]: AOPConfig & Logback & Process&Thread 
 
 ### 1. AOP (Aspect Oriented Programming)
+
+# 🐠📖 2023.02.18[jrcho]: React & Spring Boot 연동
+
+### 1. spring initializr > settings (java version, build and run > intelliJ IDEA)
+
+### 2. terminal > install react
+
+### 3. react default port: 3000 
+
+### 4. proxy setting for CORS Policy 
+
+### 5. front-end axios setting
+
+### 6. back-end controller setting
+
+### 7. buil.gradle setting > When Spring Boot build your project, React project will be built first.
+
+### 8. home directory (cd %userprofile%) > gradle build
+
+> port 수정 > npm start에서 set PORT=3002 && 추가
+
+### 9. When it is successfully built, there is jar file in build/libs
