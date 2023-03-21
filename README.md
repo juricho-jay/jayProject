@@ -130,4 +130,4 @@ Special Thanks to 👍 https://ssjeong.tistory.com/   👍 https://github.com/Je
 
 > port 수정 > npm start에서 set PORT=3002 && 추가
 
-### 9. When it is successfully built, there is jar file in build/libs
+### 9. When it is successfully built, there is a jar file in build/libs
